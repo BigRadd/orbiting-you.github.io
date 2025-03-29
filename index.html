@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Piece Test | ¿Qué Personaje Eres?</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="overlay"></div>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/One_Piece_Logo.png" alt="Straw Hat Jolly Roger" class="jolly-roger jolly1">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Crossed_Sabres_One_Piece_Logo.svg/1200px-Crossed_Sabres_One_Piece_Logo.svg.png" alt="Marine Logo" class="jolly-roger jolly2">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Revolutionary_Army_One_Piece_Logo.svg/1200px-Revolutionary_Army_One_Piece_Logo.svg.png" alt="Revolutionary Army Logo" class="jolly-roger jolly3">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Seven_Warlords_of_the_Sea_One_Piece_Logo.svg/1200px-Seven_Warlords_of_the_Sea_One_Piece_Logo.svg.png" alt="Shichibukai Logo" class="jolly-roger jolly4">
+
+    <div class="container">
+        <header>
+            <img src="one-piece-logo.png" alt="One Piece" class="main-logo">
+            <div class="subtitle">Descubre qué personaje del universo One Piece eres según tu personalidad</div>
+        </header>
+
+        <div class="test-container">
+            <div class="progress-container">
+                <div class="mini-luffy"></div>
+                <div class="progress-bar"></div>
+                <div class="meat-reward"></div>
+            </div>
+
+            <div id="questions-container">
+                <!-- Las preguntas se insertarán aquí dinámicamente -->
+            </div>
+
+            <div class="navigation">
+                <button id="prev-btn" disabled><i class="fas fa-arrow-left"></i> Anterior</button>
+                <button id="next-btn">Siguiente <i class="fas fa-arrow-right"></i></button>
+            </div>
+        </div>
+
+        <div class="result-container" id="result-container">
+            <h2 class="subtitle">¡Tu personaje de One Piece es!</h2>
+
+            <div class="character-image-container">
+                <img id="character-image" class="character-image" src="" alt="Personaje de One Piece">
+            </div>
+
+            <div class="character-name" id="character-name"></div>
+
+            <div class="character-details">
+                <div class="detail-card faction">
+                    <div class="detail-title">
+                        <i class="fas fa-flag"></i> Facción
+                    </div>
+                    <div class="detail-value" id="character-faction"></div>
+                </div>
+
+                <div class="detail-card devil-fruit">
+                    <div class="detail-title">
+                        <i class="fas fa-apple-alt"></i> Fruta del Diablo
+                    </div>
+                    <div class="detail-value" id="character-devil-fruit"></div>
+                </div>
+
+                <div class="detail-card haki">
+                    <div class="detail-title">
+                        <i class="fas fa-fist-raised"></i> Haki
+                    </div>
+                    <div class="detail-value" id="character-haki"></div>
+                </div>
+
+                <div class="detail-card bounty">
+                    <div class="detail-title">
+                        <i class="fas fa-coins"></i> Recompensa
+                    </div>
+                    <div class="detail-value" id="character-bounty"></div>
+                </div>
+            </div>
+
+            <div class="character-description" id="character-description"></div>
+
+            <div class="share-buttons">
+                <button class="share-btn" onclick="shareResult()">
+                    <i class="fas fa-share-alt"></i> Compartir Resultado
+                </button>
+                <button class="share-btn restart-btn" onclick="restartTest()">
+                    <i class="fas fa-redo"></i> Hacer Test Nuevamente
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
